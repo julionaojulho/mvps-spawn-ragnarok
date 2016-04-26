@@ -15,17 +15,18 @@ class Mvp:
             spawn_map (str): The map in which the monster appears.
 
         Attributes:
-            last_death (datetime):
+            last_death (datetime): The date and time WITH TIMEZONE of the last
+            known death.
         """
     def __init__(self, name, respawn_min, spawn_map):
-        self.nome = name
+        self.name = name
         self.tempo_respawn = timedelta(minutes=respawn_min)
         self.map = spawn_map
         self.last_death = None  # type: datetime
 
     def next_respawn(self):
         """
-        Estimates the time remaining for the next respawn of this mvp.
+        Estimates the time remaining for the next respawn of this MvP.
 
         Returns:
             int: Estimated time, in minutes, for next respawn of this monster.

@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import unittest
 from datetime import datetime
 
@@ -26,6 +27,7 @@ class MvpTest(unittest.TestCase):
         value = self.mvp.next_respawn()
         self.assertEqual(value, None,
                          "Mvp next respawn returned {}!".format(value))
+
 
 if __name__ == '__main__':
     unittest.main()
