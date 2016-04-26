@@ -1,14 +1,15 @@
 import unittest
 
-from view.Mvpview import MvpView
+from view.MvpView import MvpView
+
 
 class MvpViewTest(unittest.TestCase):
     """Testing class for MvpView."""
 
     def setUp(self):
         self.view = MvpView('eddga')
-        print self.view
 
+    @unittest.skip
     def test_add_entry(self):
         self.view.add_entry(['eddga'])
 
@@ -18,11 +19,4 @@ class MvpViewTest(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-    
-Mvp = MvpView()
-Mvp.add_entry(['eddga'])
-print Mvp.time
-Mvp.nextonlist()
-print Mvp.queued
-
-#in progress
+# in progress
