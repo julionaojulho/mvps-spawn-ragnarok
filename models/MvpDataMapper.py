@@ -14,7 +14,7 @@ def save(mvp):
         mvp (Mvp): Mvp object to be persisted.
 
     """
-    _db[mvp.name] = mvp
+    _db[(mvp.name, mvp.map)] = mvp
 
     with open('mvps.db', 'wb') as output:
         pickle.dump(_db, output)
